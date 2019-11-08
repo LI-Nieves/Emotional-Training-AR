@@ -1,0 +1,52 @@
+Base path: C:/Program Files/Unity/Hub/Editor/2019.1.0f2/Editor/Data
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=110837 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=31625 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=30657 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=56265 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=43565 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=36381 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14406 outsize=43501 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=26648 outsize=15525 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5767 outsize=5913 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=9347 outsize=9265 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7423 outsize=6509 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2532 outsize=1877 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20012 outsize=14377 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3022 outsize=473 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=20668 outsize=95037 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=34508 outsize=35413 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=34508 outsize=36169 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=17193 outsize=7121 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5089 outsize=1361 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5089 outsize=929 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=14985 outsize=3013 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7712 outsize=4345 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3918 outsize=945 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5723 outsize=7149 ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7237 outsize=142 kw=_NORMALMAP_TANGENT_SPACE _NORMALMAP _MASKMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
