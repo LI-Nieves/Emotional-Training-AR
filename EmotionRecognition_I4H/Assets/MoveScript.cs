@@ -5,11 +5,13 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour
 {
     private Animator anm;
+    private Transform tr;
 
     // Start is called before the first frame update
     void Start()
     {
         anm = gameObject.GetComponent<Animator>();
+        tr = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -19,11 +21,19 @@ public class MoveScript : MonoBehaviour
     }
 
     float CheckXPosition() {
-        return gameObject.GetComponent<Transform>().position.x;
+        return tr.position.x;
+    }
+
+    float CheckYPosition() {
+        return tr.position.y;
+    }
+
+    float CheckZPosition() {
+        return tr.position.z;
     }
 
     bool ReachedCentre() {
-        return CheckXPosition() <= 0.15f && CheckXPosition() >= -0.15f;
+        return CheckZPosition() <= 0.15f && CheckZPosition() >= -0.15f;
     }
 
     void MoveCharacter() {
