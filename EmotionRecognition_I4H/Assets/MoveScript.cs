@@ -48,6 +48,14 @@ public class MoveScript : MonoBehaviour
             case 0: // Walk forward
                 Movement1();
                 break;
+            case 1:
+                anm.SetBool("isWalking",false);
+                anm.SetBool("isTripping",false);
+                if (!(tr.rotation.eulerAngles.y > 85f) && !(tr.rotation.eulerAngles.y < 95f)) {
+                    tr.rotation = Quaternion.Euler(new Vector3(0f,90f,0f));
+                }
+                break;
+                /*
             case 1: // Trip and fall
                 Movement2();
                 break;
@@ -56,6 +64,7 @@ public class MoveScript : MonoBehaviour
                 break;
             case 3: // Turn left and camera zoom
                 break;
+                */
         }
     }
 
@@ -68,6 +77,7 @@ public class MoveScript : MonoBehaviour
         }
     }
 
+    /*
     void Movement2() {
         anm.SetBool("isTripping",false);
         anm.SetBool("isWalking",false);
@@ -78,19 +88,22 @@ public class MoveScript : MonoBehaviour
         anm.SetBool("isTripping",false);
         TurnCharacter();
     }
+    
+    void Movement4() {
+        anm.SetBool("isIdle",true);
+    }
 
     void TurnCharacter() {
-        //Debug.Log(gameObject.GetComponent<Transform>().rotation.ToString());
-        if (GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation != new Quaternion(0f,1f,0f,0f)) {
-            anm.SetBool("isTurning",true);
+        Debug.Log(gameObject.GetComponent<Transform>().rotation.eulerAngles.y.ToString());
+        if ((GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y > 85f) &&
+            (GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y < 95f)) {
+            tr.Rotate(new Vector3(0f,90f,0f));
         } else {
-            anm.SetBool("isTurning",false);
+            //anm.SetBool("isTurning",false);
+            IncrementStep();
         }
     }
-
-    public void SetFallenStatus() {
-        hasFallen = true;
-    }
+    */
 
     public void IncrementStep() {
         currentStep++;
