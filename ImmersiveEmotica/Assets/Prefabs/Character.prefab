@@ -1311,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938844623015904218}
   - component: {fileID: 7173515076139396768}
+  - component: {fileID: 8296172668013359977}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1355,18 +1356,24 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'mixamorig9:Hips'\n\tTransform 'mixamorig9:LeftHandRing3'\n\tTransform
-    'mixamorig9:RightHandRing1'\n\tTransform 'mixamorig9:LeftHandPinky3'\n\tTransform
-    'mixamorig9:LeftHandIndex2'\n\tTransform 'mixamorig9:RightHandThumb2'\n\tTransform
-    'mixamorig9:LeftForeArm'\n\tTransform 'mixamorig9:LeftFoot'\n\tTransform 'mixamorig9:RightHandThumb3'\n\tTransform
-    'mixamorig9:RightHandPinky1'\n\tand more ...\n\tFrom animation clip 'Idle'\n\tFrom
-    animation clip 'Left Turn'\n\tFrom animation clip 'Walking'\n\tFrom animation
-    clip 'Tripping2'\n\tFrom animation clip 'Standing Up'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8296172668013359977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277342043836051913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63089ad5ba41b6c4f91342bb7ad3edbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasFallen: 0
+  fallOffset: 3
 --- !u!1 &4314915948208593735
 GameObject:
   m_ObjectHideFlags: 0
