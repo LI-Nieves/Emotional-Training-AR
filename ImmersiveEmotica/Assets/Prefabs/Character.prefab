@@ -1318,7 +1318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &938844623015904218
 Transform:
   m_ObjectHideFlags: 0
@@ -1372,6 +1372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63089ad5ba41b6c4f91342bb7ad3edbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventBox: {fileID: 0}
   hasFallen: 0
   fallOffset: 3
 --- !u!1 &4314915948208593735
