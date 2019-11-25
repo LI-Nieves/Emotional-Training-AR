@@ -10,8 +10,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -637,7 +639,7 @@ ScriptsOnlyBuild:
     className: PostProcessProfile
   - hash:
       serializedVersion: 2
-      Hash: bad0b66c87d7d04396b6b9594ab4436a
+      Hash: adef89e3bf480a385abe3ef9b3c81f64
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIScript
@@ -727,7 +729,7 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 3f157f26a093c1d4ec82d0375c23522e
+      Hash: 7e511ee398fb15f5a8fd1c72e1cdb421
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveScript

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
+    public GameObject eventBox;
     private Animator anm;
     private Transform tr;
     private int currentStep;
@@ -17,6 +18,7 @@ public class MoveScript : MonoBehaviour
     {
         anm = gameObject.GetComponent<Animator>();
         tr = gameObject.GetComponent<Transform>();
+        eventBox = GameObject.Find("EVENTBOX");
         currentStep = 0;
         hasFallen = false;
     }
@@ -43,19 +45,17 @@ public class MoveScript : MonoBehaviour
         return CheckZPosition() <= (0.1f + offset) && CheckZPosition() >= (-0.1f + offset);
     }
 
+    bool IsIdle() {
+        return anm.GetCurrentAnimatorClipInfo(0)[0].clip.ToString() == "Idle (UnityEngine.AnimationClip)";
+    }
+
     void MoveCharacter() {
-        switch (currentStep) {
-            case 0: // Walk forward
-                Movement1();
-                break;
-            case 1: // Trip and fall
-                Movement2();
-                break;
-            case 2: // Get up
-                Movement3();
-                break;
-            case 3: // Turn left and camera zoom
-                break;
+        if (ReachedCentre(fallOffset)) {
+            anm.SetBool("isTripping",true);
+        }
+
+        if (IsIdle()) {
+            eventBox.GetComponent<UIScript>().ShowChoicesUI();
         }
     }
 
@@ -76,16 +76,15 @@ public class MoveScript : MonoBehaviour
 
     void Movement3() {
         anm.SetBool("isTripping",false);
-        TurnCharacter();
+        if (GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y >= -100f &&
+            GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y <= -80f) {
+            anm.SetBool("isTurning",false);
+        } else {
+            anm.SetBool("isTurning",true);
+        }
     }
 
     void TurnCharacter() {
-        //Debug.Log(gameObject.GetComponent<Transform>().rotation.ToString());
-        if (GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation != new Quaternion(0f,1f,0f,0f)) {
-            anm.SetBool("isTurning",true);
-        } else {
-            anm.SetBool("isTurning",false);
-        }
     }
 
     public void SetFallenStatus() {
