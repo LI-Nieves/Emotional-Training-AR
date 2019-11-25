@@ -7,20 +7,26 @@ public class UIScript : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject pauseScreen;
+    public GameObject choicesUI;
+
+    public bool showChoices;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu = GameObject.Find("PauseMenu");
         pauseScreen = GameObject.Find("PauseScreen");
+        choicesUI = GameObject.Find("ChoicesUI");
         pauseMenu.SetActive(false);
         pauseScreen.SetActive(false);
+        choicesUI.SetActive(false);
+        showChoices = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CheckStatusOfChoices();
     }
 
     // FOR MAIN MENU USE
@@ -51,5 +57,17 @@ public class UIScript : MonoBehaviour
 
     public void ReturnToMenu() {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ShowChoices(bool set) {
+        showChoices = set;
+    }
+
+    public void SetSceneDoneUI(bool set) {
+        //choicesUI.SetActive(set);
+    }
+
+    void CheckStatusOfChoices() {
+        SetSceneDoneUI(showChoices);
     }
 }

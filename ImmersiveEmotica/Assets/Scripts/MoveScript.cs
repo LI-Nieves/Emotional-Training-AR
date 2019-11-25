@@ -80,11 +80,19 @@ public class MoveScript : MonoBehaviour
     }
 
     void TurnCharacter() {
-        //Debug.Log(gameObject.GetComponent<Transform>().rotation.ToString());
+        Debug.Log("GameObject: " + gameObject.GetComponent<Transform>().rotation.eulerAngles.y.ToString() + "\tHips:" + GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y.ToString());
+        /*
         if (GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation != new Quaternion(0f,1f,0f,0f)) {
             anm.SetBool("isTurning",true);
         } else {
             anm.SetBool("isTurning",false);
+        }
+        */
+        if (GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y >= -100f &&
+            GameObject.Find("mixamorig9:Hips").GetComponent<Transform>().rotation.eulerAngles.y <= -80f) {
+            anm.SetBool("isTurning",false);
+        } else {
+            anm.SetBool("isTurning",true);
         }
     }
 
