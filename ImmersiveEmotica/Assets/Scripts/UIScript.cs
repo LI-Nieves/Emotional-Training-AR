@@ -26,7 +26,7 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckStatusOfChoices();
+        choicesUI.SetActive(showChoices);
     }
 
     // FOR MAIN MENU USE
@@ -59,15 +59,11 @@ public class UIScript : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void ShowChoices(bool set) {
-        showChoices = set;
+    public void ShowChoicesUI() {
+        showChoices = true;
     }
 
-    public void SetSceneDoneUI(bool set) {
-        //choicesUI.SetActive(set);
-    }
-
-    void CheckStatusOfChoices() {
-        SetSceneDoneUI(showChoices);
+    public void HideChoicesUI() {
+        showChoices = false;
     }
 }

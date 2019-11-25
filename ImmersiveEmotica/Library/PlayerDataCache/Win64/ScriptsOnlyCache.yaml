@@ -10,8 +10,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -637,7 +639,7 @@ ScriptsOnlyBuild:
     className: PostProcessProfile
   - hash:
       serializedVersion: 2
-      Hash: bad0b66c87d7d04396b6b9594ab4436a
+      Hash: 1a12bf9741f2ea263ff09be05be1670c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIScript
